@@ -1,0 +1,4 @@
+.env
+keyfile.json
+node_modules
+dist
