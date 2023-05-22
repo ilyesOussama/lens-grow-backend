@@ -10,7 +10,7 @@ import {
   getProfileFollowModuleFollowRecord,
   getProfileNftGallery,
   getProfileRecommendedDismissed,
-} from "../controllers/profile.controller";
+} from "../controllers/profile.controllers";
 
 const router = express.Router();
 
