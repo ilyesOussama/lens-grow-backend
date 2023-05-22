@@ -4,4 +4,4 @@ const protocolStateParams: tableParams = {
   tableName: "public_protocol_state",
 };
 
-export const getSybilsVerified = getTableData(protocolStateParams);
+export const getProtocolState = getTableData(protocolStateParams);

@@ -18,7 +18,7 @@ const mentionStatsParams = {
   tableId: "mention",
 };
 
-export const getMnetions = getTableData(mentionsParams);
+export const getMentions = getTableData(mentionsParams);
 export const getMention = getTableData(mentionParams);
 export const getMentionsStats = getTableData(mentionsStatsParams);
 export const getMentionStats = getTableData(mentionStatsParams);
