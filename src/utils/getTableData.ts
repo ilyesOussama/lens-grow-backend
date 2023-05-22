@@ -44,11 +44,9 @@ const getTableData = ({
         location: "US",
       };
 
-      console.log(query);
-
       const [rows] = await client.query(options);
 
-      res.json(rows);
+      res.status(200).json(rows);
     } catch (error) {
       console.error(error);
       res.status(500).send("Internal Server Error");

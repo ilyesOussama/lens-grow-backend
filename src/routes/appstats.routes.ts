@@ -1,33 +1,33 @@
 import express from "express";
 
 import {
-  getAppAppPublicationStats,
-  getAppAppPublicationTagStats,
-  getAppPubPublicationStats,
-  getAppTagPublicationTagStats,
-  getAppPubPublicationsStats,
-  getAppsAppProfilesStats,
   getAppsAppPublicationsStats,
+  getAppAppPublicationStats,
+  getAppsPubPublicationsStats,
+  getAppPubPublicationStats,
   getAppsAppPublicationsTagsStats,
-  getAppProfileProfileStats,
-  getAppsProfilesProfilesStats,
+  getAppAppPublicationTagStats,
   getAppsTagPublicationsTagsStats,
+  getAppTagPublicationTagStats,
+  getAppsAppProfilesStats,
   getAppAppProfileStats,
+  getAppsProfilesProfilesStats,
+  getAppsProfileProfilesStats,
 } from "../controllers/appstats.controllers";
 
 const router = express.Router();
 
-router.get("/publication", getAppsProfilesProfilesStats);
-router.get("/publication/:id", getAppProfileProfileStats);
-router.get("/app", getAppsAppProfilesStats);
+router.get("/publication", getAppsPubPublicationsStats);
+router.get("/publication/:id", getAppPubPublicationStats);
+router.get("/app", getAppsAppPublicationsStats);
 router.get("/app/:id", getAppAppPublicationStats);
-router.get("/tag");
-router.get("/tag/:id");
-router.get("/tag/app");
-router.get("/tag/app/:id");
-router.get("/profile");
-router.get("/profile/:id");
-router.get("/profile/app");
-router.get("/profile/app/:id");
+router.get("/tag", getAppsTagPublicationsTagsStats);
+router.get("/tag/:id", getAppTagPublicationTagStats);
+router.get("/tag/app", getAppsAppPublicationsTagsStats);
+router.get("/tag/app/:id", getAppAppPublicationTagStats);
+router.get("/profile", getAppsProfilesProfilesStats);
+router.get("/profile/:id", getAppsProfileProfilesStats);
+router.get("/profile/app", getAppsAppProfilesStats);
+router.get("/profile/app/:id", getAppAppProfileStats);
 
 export default router;
